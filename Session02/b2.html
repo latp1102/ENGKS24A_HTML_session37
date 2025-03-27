@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: rgb(186, 176, 176);
+        }
+        .container {
+            width: auto;
+        }
+        .food-item {
+            padding: 20px;
+            margin: 10px 0;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: #fff;
+            
+        }
+        .food-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .like-btn {
+            background-color: green;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Bạn thích món nào nhất?🍲</h2>
+    <div class="container">
+        <div class="food-item" >
+            <img src="https://kinhdoamthuc.com/wp-content/uploads/2023/07/bun-bo-hue-1_1628650972.jpg" alt="">
+            <h3>Bún bò Huế</h3>
+            <p>❤️ <span class="likes">0</span> lượt thích</p>
+            <button class="like-btn">Thích +1</button>
+        </div>
+        <div class="food-item" >
+            <img src="https://static.kinhtedothi.vn/w960/images/upload/2022/09/16/phobohanoi.jpg" alt="">
+            <h3>Phở bò Hà Nội</h3>
+            <p>❤️ <span class="likes">0</span> lượt thích</p>
+            <button class="like-btn">Thích +1</button>
+        </div>
+        <div class="food-item" data-food="comtam">
+            <img src="https://statics.vinpearl.com/com-tam-ngon-o-sai-gon-0_1630562640.jpg" alt="">
+            <h3>Cơm tấm Sài Gòn</h3>
+            <p>❤️ <span class="likes">0</span> lượt thích</p>
+            <button class="like-btn">Thích +1</button>
+        </div>
+    </div>
+    <script src="./b2.js"></script>
+</body>
+</html>
