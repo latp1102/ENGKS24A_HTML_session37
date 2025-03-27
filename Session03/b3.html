@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        transition: background-color 0.5s;
+      }
+      .container {
+        margin-top: 50px;
+      }
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+      }
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .purple {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chọn màu nền bạn yêu thích</h1>
+      <button class="red">Đỏ</button>
+      <button class="blue">Xanh</button>
+      <button class="yellow">Vàng</button>
+      <button class="purple">Tím</button>
+      <p>Trang sẽ ghi nhớ màu bạn đã chọn kể cả khi tải lại!</p>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedColor = localStorage.getItem("backgroundColor");
+        if (savedColor) {
+          document.body.style.backgroundColor = savedColor;
+        }
+
+        document.querySelectorAll("button").forEach((button) => {
+          button.addEventListener("click", function () {
+            const color = this.classList[0]; 
+            document.body.style.backgroundColor = color;
+            localStorage.setItem("backgroundColor", color);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
